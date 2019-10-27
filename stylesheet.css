@@ -1,0 +1,113 @@
+.layout {
+    borde: 1px solid #B22222;
+    display: flex;
+  
+    justify-content: center;
+    
+}
+
+.parent {
+    borde: 1px solid #B22222;
+    display: grid;
+    width: 70%;
+    grid-template-columns: 380px 1fr;
+    grid-template-rows: 200px 600px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+
+.header {
+    borde: 1px solid #B22222;
+    heigh:200px;  
+    display: flex;
+    flex-direction: column;
+    color: black; 
+    align-items: flex-start;
+    flex: wrap;
+ /*   grid-column-start: 1;
+    grid-column-end: 3; 
+*/
+}
+
+.navigation {
+    float: right; 
+}
+
+/*
+.naslovnica {
+    borde: 1px solid #B22222;
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+*/
+
+.naslov-dela {
+    borde: 3px solid blue;
+    display: flex;
+    flex-flow: wrap;
+    align-self: flex-end;
+    margin-top: 10px;
+    font-size: 2em;
+}
+
+.opis-dela {
+    borde: 3px solid blue;
+    display: flex;
+    flex-flow: wrap;
+    align-self: flex-end;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.container-dela {
+    borde: 3px solid blue;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: column;
+    grid-column-start: 1;
+    grid-column-end: 3; 
+}
+
+h1 {
+    borde: 1px solid #B22222;
+    font-family: "Old Standard TT", serif;
+    font-size: 2em;
+    color: black; 
+    margin: 10px 0 0 0;
+}
+
+p {
+ /*   margin-top: -90px;  za spreminjanje pozicije- visine */
+    borde: 1px solid #B22222;
+    justify-content: center;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 1.5em;
+    color: black;
+    margin: 0 0 0 0;
+}
+
+img {
+    borde: 3px solid #B22222;
+    display: flex;
+    max-widt:100%;
+    max-heigh:100%;
+    height: 450px;
+    width: auto;
+    object-fit: cover;
+    float: right;
+    position: relative;
+}
+
+@media screen and (max-width: 1082px) {
+    .parent {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 4em;
+   
+    }
+    #text {
+        font-size: 3em;
