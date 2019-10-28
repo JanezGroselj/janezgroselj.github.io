@@ -1,5 +1,5 @@
 .layout {
-    borde: 1px solid #B22222;
+    border: 1px solid #B22222;
     display: flex;
     margin-top: 20px;
     justify-content: center;
@@ -7,17 +7,17 @@
 }
 
 .parent {
-    borde: 1px solid #B22222;
+    border: 1px solid #B22222;
     display: grid;
     width: 70%;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     }
 
 .header {
-    borde: 1px solid #B22222;
+    border: 1px solid #B22222;
     heigh:200px;  
     display: flex;
     flex-direction: column;
@@ -31,15 +31,16 @@
 }
 
 .navigation {
+    border: 1px solid #B22222;
     display: flex;
-    flex-direction: row;
-    margin-top: 50px;
+    flex-direction: column;
+    margin-top: px;
 
 }
 
 /*
 .naslovnica {
-    borde: 1px solid #B22222;
+    border: 1px solid #B22222;
     display: grid;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -47,7 +48,7 @@
 */
 
 .naslov-dela {
-    borde: 3px solid blue;
+    border: 3px solid blue;
     display: flex;
     flex-flow: wrap;
     align-self: flex-end;
@@ -57,7 +58,7 @@
 }
 
 .opis-dela {
-    borde: 3px solid blue;
+    border: 3px solid blue;
     display: flex;
     flex-flow: wrap;
     align-self: flex-end;
@@ -67,16 +68,17 @@
 }
 
 .container-dela {
-    borde: 3px solid blue;
+    border: 3px solid blue;
     display: flex;
     flex-flow: wrap;
     flex-direction: column;
-    grid-column-start: 1;
+ /*   grid-column-start: 1;
     grid-column-end: 3; 
+*/
 }
 
 h1 {
-    borde: 1px solid #B22222;
+    border: 1px solid #B22222;
     font-family: "Old Standard TT", serif;
     font-size: 2em;
     color: black; 
@@ -86,7 +88,7 @@ h1 {
 
 .podnaslov {
  /*   margin-top: -90px;  za spreminjanje pozicije- visine */
-    borde: 1px solid #B22222;
+    border: 1px solid #B22222;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 1.5em;
     color: black;
@@ -95,7 +97,7 @@ h1 {
 
 p {
     /*   margin-top: -90px;  za spreminjanje pozicije- visine */
-       borde: 1px solid #B22222;
+       border: 1px solid #B22222;
        justify-content: center;
        font-family: "Open Sans Condensed", sans-serif;
        font-size: 1.3em;
@@ -105,7 +107,7 @@ p {
 }
 
 img {
-    borde: 3px solid #B22222;
+    border: 3px solid #B22222;
     display: flex;
     max-widt:100%;
     max-heigh:100%;
@@ -123,7 +125,7 @@ a:link {
     text-decoration: none;
     font-size: 1.4em;
     margin-right: 15px;
-    margin-top: 30px;
+    margin-top: 5px;
 }
 
 /*
@@ -172,6 +174,11 @@ a:visited {
         margin-top: 70px;
     }
 
+    .container-dela {
+        grid-column-start: 1;
+        grid-column-end: 3; 
+    }
+
     #text {
         font-size: 3em;
     }
@@ -182,17 +189,18 @@ a:visited {
     }
 
     a:link {
+            border: 1px solid #B22222;
             color: black;
             background-color: transparent;
             font-family: "Open Sans Condensed", sans-serif;
             text-decoration: none;
             font-size: 3em;
             margin-right: 20px;
-            white-space: nowrap;
+            white-spac: nowrap;
         }
 
     img {
-        borde: 3px solid green;
+        border: 3px solid green;
         width: 100%;
         height: 100%;
     }
