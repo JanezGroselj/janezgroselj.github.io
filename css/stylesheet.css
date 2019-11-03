@@ -149,13 +149,14 @@ a:link {
     margin-top: 5px;
 }
 
-/*
+
 a:visited {
-    color: pink;
+    color: none;
     background-color: transparent;
     text-decoration: none;
   }
   
+/* 
   a:hover {
     color: red;
     background-color: transparent;
