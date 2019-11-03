@@ -35,7 +35,6 @@
     display: flex;
     flex-direction: column;
     margin-top: px;
-
 }
 
 /*
@@ -189,6 +188,14 @@ a:visited {
 
     p {
         font-size: 3em;
+    }
+
+    .navigation {
+        borde: 1px solid #B22222;
+        display: flex;
+        flex-direction: column;
+        margin-top: px;
+        font-size: 1.5em;
     }
 
     .naslov-dela {
