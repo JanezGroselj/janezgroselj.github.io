@@ -35,6 +35,8 @@
     display: flex;
     flex-direction: column;
     margin-top: px;
+    grid-row-start: 2;
+    grid-row-end: 5;
 }
 
 /*
@@ -66,11 +68,23 @@
     font-size: 1em;
 }
 
-.container-dela {
-    borde: 3px solid blue;
+.container-dela-prvi {
+    borde: 3px solid yellow;
     display: flex;
     flex-flow: wrap;
     flex-direction: column;
+    margin-top: px;
+ /*   grid-column-start: 1;
+    grid-column-end: 3; 
+*/
+}
+
+.container-dela-naslednji {
+    borde: 3px solid yellow;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: column;
+    margin-top: 30px;
  /*   grid-column-start: 1;
     grid-column-end: 3; 
 */
