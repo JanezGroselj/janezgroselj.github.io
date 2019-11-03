@@ -151,7 +151,7 @@ a:link {
 
 
 a:visited {
-    color: none;
+    color: black;
     background-color: transparent;
     text-decoration: none;
   }
