@@ -68,10 +68,18 @@
     font-size: 1em;
 }
 
-.container-dela-prvi {
-    borde: 3px solid yellow;
+.container-del {
+    borde: 2px solid green;
     display: flex;
-    flex-flow: wrap;
+    flex-flow: nowrap;
+    flex-direction: column;
+    align-self: flex-end;
+}
+
+.container-dela-prvi {
+    borde: 5px solid orange;
+    display: flex;
+    flex-flow: nowrap;
     flex-direction: column;
     margin-top: px;
  /*   grid-column-start: 1;
@@ -82,7 +90,7 @@
 .container-dela-naslednji {
     borde: 3px solid yellow;
     display: flex;
-    flex-flow: wrap;
+    flex-flow: nowrap;
     flex-direction: column;
     margin-top: 30px;
  /*   grid-column-start: 1;
@@ -143,7 +151,19 @@ p {
 img {
     borde: 3px solid #B22222;
     display: flex;
-    max-widt:100%;
+    max-width:100%;
+    max-heigh:100%;
+    height: 500px;
+    width: auto;
+    object-fit: cover;
+    float: right;
+    position: relative;
+}
+
+img.landscape {
+    borde: 3px solid #B22222;
+    display: flex;
+    max-width:100%;
     max-heigh:100%;
     height: 500px;
     width: auto;
@@ -205,11 +225,13 @@ a:visited {
     }
 
     .navigation {
-        borde: 1px solid #B22222;
+        borde: 3px solid #B22222;
         display: flex;
         flex-direction: column;
         margin-top: px;
         font-size: 1.5em;
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
 
     .naslov-dela {
@@ -217,9 +239,13 @@ a:visited {
         margin-top: 70px;
     }
 
-    .container-dela {
-        grid-column-start: 1;
-        grid-column-end: 3; 
+    .container-del {
+        display: flex;
+        flex: nowrap;
+        flex-direction: column;
+        grid-row-start: 5;
+        grid-row-end: 8; 
+        align-self: flex-end;
     }
     .container-contact {
         grid-column-start: 1;
@@ -262,4 +288,9 @@ a:visited {
         height: 100%;
     }
 
+    img.landscape {
+        borde: 3px solid green;
+        width: 100%;
+        max-height: 100%;
+    }
     
