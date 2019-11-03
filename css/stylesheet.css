@@ -77,6 +77,16 @@
 */
 }
 
+.container-contact {
+    borde: 3px solid blue;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: column;
+ /*   grid-column-start: 1;
+    grid-column-end: 3; 
+*/
+}
+
 h1 {
     borde: 1px solid #B22222;
     font-family: "Old Standard TT", serif;
@@ -93,6 +103,17 @@ h1 {
     font-size: 1.5em;
     color: black;
     margin: 0 0 0 0;
+}
+
+.contact {
+    borde: 3px solid blue;
+    font-family: "Open Sans Condensed", sans-serif;
+    display: flex;
+    flex-flow: wrap;
+    align-self: flex-start;
+    margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: 700;
 }
 
 p {
@@ -178,6 +199,11 @@ a:visited {
         grid-column-start: 1;
         grid-column-end: 3; 
     }
+    .container-contact {
+        grid-column-start: 1;
+        grid-column-end: 3; 
+        margin-top: 100px;
+    }
 
     #text {
         font-size: 3em;
@@ -186,6 +212,15 @@ a:visited {
     .podnaslov {
         font-size: 3em;
         margin-bottom: 50px;
+    }
+
+    .contact {
+        borde: 3px solid blue;
+        font-family: "Open Sans Condensed", sans-serif;
+        display: flex;
+        flex-flow: wrap;
+        margin-top: 10px;
+        font-size: 3em;
     }
 
     a:link {
@@ -204,3 +239,5 @@ a:visited {
         width: 100%;
         height: 100%;
     }
+
+    
