@@ -1,5 +1,5 @@
 .layout {
-    borde: 1px solid #B22222;
+    border: 1px solid #B22222;
     display: flex;
     margin: 0;
     justify-content: center;
@@ -7,7 +7,7 @@
 }
 
 .parent {
-    borde: 1px solid #B22222;
+    border: 1px solid #B22222;
     display: grid;
     width: 80%;
     grid-template-columns: auto auto;
@@ -20,7 +20,7 @@
 
 .headbar {
         position: fixed;
-        borde: 1px solid cyan;
+        border: 1px solid cyan;
         display: flex;
         flex-direction: column;
         color: black; 
@@ -29,12 +29,13 @@
         width: 100%;
         background-color: white;
         top: 0;
+        z-index: 99;
 
 }
     
 
 .header {
-    borde: 1px solid #B22222;
+    border: 1px solid #B22222;
     heigh:200px;  
     display: flex;
     flex-direction: column;
@@ -49,7 +50,7 @@
 }
 
 .navigation {
-    borde: 1px solid #B22222;
+    border: 1px solid #B22222;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -59,7 +60,7 @@
 
 /*
 .naslovnica {
-    borde: 1px solid #B22222;
+    border: 1px solid #B22222;
     display: grid;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -67,7 +68,7 @@
 */
 
 .naslov-dela {
-    borde: 3px solid blue;
+    border: 3px solid blue;
     display: flex;
     flex-flow: wrap;
     align-self: flex-end;
@@ -77,7 +78,7 @@
 }
 
 .opis-dela {
-    borde: 3px solid blue;
+    border: 3px solid blue;
     display: flex;
     flex-flow: wrap;
     align-self: flex-end;
@@ -87,7 +88,7 @@
 }
 
 .container-del {
-    borde: 2px solid green;
+    border: 2px solid green;
     display: flex;
     flex-flow: nowrap;
     flex-direction: column;
@@ -96,7 +97,7 @@
 }
 
 .container-dela-prvi {
-    borde: 5px solid orange;
+    border: 5px solid orange;
     display: flex;
     flex-flow: nowrap;
     flex-direction: column;
@@ -107,7 +108,7 @@
 }
 
 .container-dela-naslednji {
-    borde: 3px solid yellow;
+    border: 3px solid yellow;
     display: flex;
     flex-flow: nowrap;
     flex-direction: column;
@@ -118,7 +119,7 @@
 }
 
 .container-contact {
-    borde: 3px solid blue;
+    border: 3px solid blue;
     display: flex;
     flex-flow: wrap;
     flex-direction: column;
@@ -128,7 +129,7 @@
 }
 
 h1 {
-    borde: 1px solid #B22222;
+    border: 1px solid #B22222;
     font-family: "Source Sans Pro", serif;
     font-size: 2.3em;
     color: black; 
@@ -141,7 +142,7 @@ h1 {
 
 .podnaslov {
  /*   margin-top: -90px;  za spreminjanje pozicije- visine */
-    borde: 1px solid #B22222;
+    border: 1px solid #B22222;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 1.5em;
     color: black;
@@ -149,7 +150,7 @@ h1 {
 }
 
 .contact {
-    borde: 3px solid blue;
+    border: 3px solid blue;
     font-family: "Open Sans Condensed", sans-serif;
     display: flex;
     flex-flow: wrap;
@@ -160,7 +161,7 @@ h1 {
 
 p {
     /*   margin-top: -90px;  za spreminjanje pozicije- visine */
-       borde: 1px solid #B22222;
+       border: 1px solid #B22222;
        justify-content: center;
        font-family: "Open Sans Condensed", sans-serif;
        font-size: 1.3em;
@@ -170,7 +171,7 @@ p {
 }
 
 img {
-    borde: 3px solid #B22222;
+    border: 3px solid #B22222;
     display: flex;
     max-width:100%;
     max-heigh:100%;
@@ -182,7 +183,7 @@ img {
 }
 
 img.landscape {
-    borde: 3px solid #B22222;
+    border: 3px solid #B22222;
     display: flex;
     max-width:100%;
     max-heigh:100%;
@@ -249,7 +250,7 @@ a:visited {
     }
 
     .navigation {
-        borde: 3px solid #B22222;
+        border: 3px solid #B22222;
         display: flex;
         flex-direction: column;
         margin-top: px;
@@ -292,7 +293,7 @@ a:visited {
     }
 
     a:link {
-            borde: 1px solid #B22222;
+            border: 1px solid #B22222;
             color: black;
             background-color: transparent;
             font-family: "Open Sans Condensed", sans-serif;
@@ -303,13 +304,13 @@ a:visited {
         }
 
     img {
-        borde: 3px solid green;
+        border: 3px solid green;
         width: 100%;
         height: 100%;
     }
 
     img.landscape {
-        borde: 3px solid green;
+        border: 3px solid green;
         width: 100%;
         max-height: 100%;
     }
