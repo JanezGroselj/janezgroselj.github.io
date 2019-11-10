@@ -366,7 +366,11 @@ to   { opacity: 1; }
 
 
     .container-dela-levi {
-        padding:
+        padding: 0;
+    }
+
+    .container-dela-desni {
+        padding: 0;
     }
 
     .container-contact {
