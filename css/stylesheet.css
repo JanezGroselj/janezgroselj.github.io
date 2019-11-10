@@ -99,7 +99,7 @@ flex-direction: column;
     flex-direction: row;
     align-conten: flex-end;
     justify-conten: center;
-    margin: 0;
+    margin-top: 50px;
 }
 
 .container-del-prvi {
@@ -119,7 +119,7 @@ flex-direction: column;
     flex-direction: column;
     margin-top: 70px;
     padding-left: 0px;
-    padding-right: 0px;
+    padding-right: 30px;
     justify-conten: flex-start;
  /*   grid-column-start: 1;
     grid-column-end: 3; 
@@ -132,7 +132,7 @@ flex-direction: column;
     flex-flow: nowrap;
     flex-direction: column;
     margin-top: 70px;
-    padding-left: 0px;
+    padding-left: 30px;
     padding-right: 0px;
     margin-left: auto;
     margin-right: 0;
