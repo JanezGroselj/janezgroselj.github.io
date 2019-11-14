@@ -74,6 +74,7 @@ flex-direction: column;
 
 .naslov-dela {
     borde: 3px solid blue;
+    font-family: "Ubuntu", sans-serif;
     display: flex;
     flex-flow: wrap;
     align-self: flex-start;
@@ -165,7 +166,7 @@ flex-direction: column;
 
 h1 {
     borde: 1px solid #B22222;
-    font-family: "Ubuntu", serif;
+    font-family: "Ubuntu", sans-serif;
     font-size: 2.3em;
     color: black; 
     margin-top: 15px;
