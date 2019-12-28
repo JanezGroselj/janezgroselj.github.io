@@ -167,10 +167,10 @@ flex-direction: column;
 h1 {
     borde: 1px solid #B22222;
     font-family: "Ubuntu", sans-serif;
-    font-size: 1em;
+    font-size: 1.5em;
     color: black; 
-    margin-top: 17px;
-    margin-bottom: 17px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     margin-left: 45px;
     white-space: nowrap;
     padding: 0;
