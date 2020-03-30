@@ -135,7 +135,7 @@ flex-direction: column;
     margin-top: 60px;
     padding-left: 30px;
     padding-right: 0px;
-    margin-left: auto;
+/*    margin-left: auto;
     margin-right: 0;
  /*   grid-column-start: 1;
     grid-column-end: 3; 
