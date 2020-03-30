@@ -122,7 +122,6 @@ flex-direction: column;
     padding-left: 0px;
     padding-right: 30px;
     justify-conten: flex-start;
-    float: left;
  /*   grid-column-start: 1;
     grid-column-end: 3; 
 */
@@ -220,7 +219,7 @@ img {
     height: 400px;
     width: auto;
     object-fit: cover;
-    float: right;
+    float: left;
     position: relative;
 }
 
@@ -232,7 +231,7 @@ img.landscape {
     height: 400px;
     width: auto;
     object-fit: cover;
-    float: right;
+    float: left;
     position: relative;
 }
 
