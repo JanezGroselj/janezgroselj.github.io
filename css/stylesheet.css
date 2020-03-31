@@ -358,7 +358,7 @@ to   { opacity: 1; }
         flex: nowrap;
         flex-direction: column;
         margin-top: 0;
-        align-self: flex-end;
+        align-sel: flex-end;
     }
 
     .container-del-prvi {
