@@ -345,13 +345,13 @@ to   { opacity: 1; }
     }
 
     .naslov-dela {
-        font-size: 1.3em;
+        font-size: 0.5em;
         margin-top: 70px;
         margin-left: 20px;
     }
 
     .opis-dela {
-        font-size: 1.2em;
+        font-size: 0.4em;
         margin-left: 20px;
     }
 
