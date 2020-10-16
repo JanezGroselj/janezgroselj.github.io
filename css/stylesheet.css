@@ -78,7 +78,7 @@ flex-direction: column;
     flex-flow: wrap;
     align-self: flex-start;
     margin-top: 0px;
-    font-size: 1.1em;
+    font-size: 0.7em;
     font-weight: 700;
 }
 
@@ -244,7 +244,7 @@ a:link {
     background-color: transparent;
     font-family: "Open Sans Condensed", sans-serif;
     text-decoration: none;
-    font-size: 1.3em;
+    font-size: 1.4em;
     margin-right: 15px;
     margin-top: 5px;
 }
