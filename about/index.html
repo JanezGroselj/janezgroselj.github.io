@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Janez Grošelj</title>
-    <link rel="icon" type="image/png" href="favicon.png"> <!-- Assumes favicon is in the root folder -->
+    <link rel="icon" type="image/png" href="favicon.png"> <!-- Assumes favicon is in the same folder -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,13 +36,13 @@
         /* --- Header --- */
         header {
             width: 100%;
-            padding: 2rem;
+            padding: 4rem 2rem 2rem 2rem; /* Adjusted padding for more space */
             box-sizing: border-box;
             text-align: center;
         }
 
         header a {
-            font-size: 1.5rem;
+            font-size: clamp(1.5rem, 4vw, 2.5rem); /* Matched font size from homepage */
             font-weight: 600;
             color: var(--primary-color);
             text-decoration: none;
@@ -57,7 +57,7 @@
         .content-container {
             width: 100%;
             max-width: 800px; /* Optimal width for reading text */
-            padding: 2rem;
+            padding: 0 2rem 2rem 2rem; /* Adjusted top padding */
             box-sizing: border-box;
             text-align: left;
         }
@@ -79,7 +79,7 @@
             font-size: clamp(1.8rem, 5vw, 2.8rem);
             font-weight: 600;
             color: var(--primary-color);
-            margin-bottom: 1rem;
+            margin-bottom: 2rem; 
         }
 
         .content-container p {
@@ -124,12 +124,13 @@
     </header>
 
     <main class="content-container">
+        
+     /*   <h1>About</h1> */
+
         <div class="profile-image-container">
             <!-- The image should be placed in an 'images' folder in the root directory -->
             <img src="../images/janez-groselj-portrait.jpg" alt="Portrait of Janez Grošelj">
         </div>
-
-        <h1>About</h1>
 
         <p>
             Janez Grošelj is an artist and architect with a passion for aesthetics, whether found in art, architecture, objects or in nature. At the core of his work is a deep appreciation for nature and the timeless dialogue between humanity and the environment. He seeks to bring these ideas closer to the public, creating experiences that are both thought-provoking and emotionally resonant.
