@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Janez Grošelj</title>
+    <link rel="icon" type="image/png" href="/favicon.png"> <!-- Assumes favicon is in the root folder -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- Basic Reset & Dark Mode Theme --- */
+        :root {
+            --background-color: #111111;
+            --text-color: #e0e0e0;
+            --primary-color: #ffffff;
+            --secondary-color: #888888;
+            --hover-color: #00adee;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: 'Figtree', sans-serif;
+            font-weight: 300;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* --- Header --- */
+        header {
+            width: 100%;
+            padding: 2rem;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        header a {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        header a:hover {
+            color: var(--hover-color);
+        }
+
+        /* --- Main Content Area --- */
+        .content-container {
+            width: 100%;
+            max-width: 800px; /* Optimal width for reading text */
+            padding: 2rem;
+            box-sizing: border-box;
+            text-align: left;
+        }
+        
+        .profile-image-container {
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            position: relative;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #222;
+        }
+
+        .profile-image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content-container h1 {
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .content-container p {
+            font-size: clamp(1rem, 2.5vw, 1.1rem);
+            line-height: 1.8;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .content-container a {
+            color: var(--hover-color);
+            text-decoration: underline;
+            font-weight: 400;
+        }
+
+        /* --- Footer --- */
+        footer {
+            padding: 4rem 2rem 2rem 2rem;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--hover-color);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- This link goes up one level from the /about/ folder to the root index.html -->
+        <a href="../index.html">Janez Grošelj</a>
+    </header>
+
+    <main class="content-container">
+        <div class="profile-image-container">
+            <!-- IMPORTANT: Replace this placeholder with a personal photo -->
+            <img src="../images/janez-groselj-portrait.jpg" alt="Portrait of Janez Grošelj">
+        </div>
+
+        <h1>About</h1>
+
+        <p>
+            Janez Grošelj is an artist and architect with a passion for aesthetics, whether found in architecture, products, or artworks. At the core of his work is a deep appreciation for nature and the timeless dialogue between humanity and the environment. He seeks to bring these ideas closer to the public, creating experiences that are both thought-provoking and emotionally resonant.
+        </p>
+        <p>
+            His creative process is a balance between embracing fresh, avant-garde technology while holding a deep respect for history, heritage, and traditional knowledge. This philosophy is the foundation of his light art studio, <a href="https://luminarium.cc" target="_blank">Luminarium</a>, through which he creates large-scale installations for international festivals.
+        </p>
+        <p>
+            Beyond his own practice, Janez is committed to fostering the next generation of creators. He has dedicated many years to sharing his knowledge and experience, mentoring students at numerous faculties and workshops.
+        </p>
+    </main>
+
+    <footer>
+        <a href="mailto:janez@luminarium.cc">Contact</a>
+    </footer>
+
+</body>
+</html>
