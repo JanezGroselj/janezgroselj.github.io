@@ -72,14 +72,15 @@
             background-color: #222;
         }
 
-        .profile-image-container img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+.profile-image-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 101%; /* Slightly larger than the container */
+    height: 101%; /* Slightly larger than the container */
+    object-fit: cover;
+    transform: translate(-50%, -50%); /* Re-centers the oversized image */
+}
 
         .content-container h1 {
             font-size: clamp(1.8rem, 5vw, 2.8rem);
