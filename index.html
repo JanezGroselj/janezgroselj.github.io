@@ -1,171 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Janez Groselj</title>
-  
-  <!-- Custom Black and White Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janez Grošelj</title>
+    <link rel="icon" type="image/png" href="/favicon.png"> <!-- Make sure you have a favicon in your root folder -->
 
-  <!-- Google Font -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;700&display=swap"
-    rel="stylesheet"
-  />
-  <style>
-    /* Reset/defaults */
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      font-family: 'Figtree', sans-serif;
-      background: #000;
-      /* We don't want scrollbars if something overflows */
-      overflow: hidden;
-      color: white;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;600&display=swap" rel="stylesheet">
 
-    /* This container always matches the viewport size and hides overflow */
-    .video-wrap {
-      position: relative;
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden; /* Crops whichever dimension is bigger */
-    }
+    <style>
+        /* --- Basic Reset & Dark Mode Theme --- */
+        :root {
+            --background-color: #111111;
+            --text-color: #e0e0e0;
+            --primary-color: #ffffff;
+            --secondary-color: #888888;
+            --hover-color: #00adee; /* A touch of color from your Luminarium site */
+        }
 
-    /* The 16:9 container that we'll dynamically size via media queries */
-    .video-ratio {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: #000; /* fallback color */
-    }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: 'Figtree', sans-serif;
+            font-weight: 300;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            text-align: center;
+        }
 
-    .video-ratio iframe {
-      display: block;
-      width: 100%;
-      height: 100%;
-      border: none;
-	  pointer-events: none; /* Make video unclickable */
-    }
+        /* --- Header & Intro --- */
+        .header {
+            padding: 4rem 2rem 2rem 2rem;
+        }
 
-    /*
-      1) If the viewport aspect ratio is WIDER than 16:9:
-         - We fill the width (100vw).
-         - The height is derived from (9/16 * width).
-         - This may crop *vertically* if the screen is extra wide.
+        h1 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 0 0 0.5rem 0;
+        }
 
-      2) If the viewport aspect ratio is NARROWER than 16:9:
-         - We fill the height (100vh).
-         - The width is derived from (16/9 * height).
-         - This may crop *horizontally* if the screen is tall/narrow.
-    */
+        .intro {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            color: var(--secondary-color);
+            max-width: 600px;
+            margin: 0 auto;
+        }
 
-    /* Fixed header/nav styles */
-    header {
-      position: fixed;
-      top: 30px;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 180px;
-      box-sizing: border-box;
-      z-index: 10; /* Stay above the video */
-    }
+        /* --- Project Blocks --- */
+        .projects-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            padding: 2rem;
+            flex-wrap: wrap; /* Allows blocks to stack on smaller screens */
+            width: 100%;
+            max-width: 1400px;
+            box-sizing: border-box;
+        }
 
-    .menu {
-      display: flex;
-      gap: 30px;
-    }
+        .project-card {
+            display: block;
+            width: 100%;
+            max-width: 600px;
+            text-decoration: none;
+            color: var(--primary-color);
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #222;
+        }
 
-    .menu a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.2rem;
-      transition: color 0.3s ease;
-    }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
 
-    .menu a:hover {
-      color: #00adee;
-    }
+        .project-preview {
+            position: relative;
+        }
 
-    /* The brand is now a link back to luminarium.cc */
-    .brand a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.4rem;
-      font-weight: semibold;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      text-align: right;
-      transition: color 0.3s ease;
-    }
-    .brand a:hover {
-      color: #00adee;
-    }
+        .project-preview img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: opacity 0.3s ease;
+        }
+        
+        .project-card:hover .project-preview img {
+            opacity: 0.8;
+        }
 
-    /* Optional text styling if needed */
-    .tagline {
-      font-size: clamp(1.5rem, 5vw, 3rem);
-      line-height: 1.5;
-      color: white;
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
-    }
+        .project-title {
+            padding: 1.5rem;
+            background-color: rgba(17, 17, 17, 0.8); /* Slightly transparent background */
+            backdrop-filter: blur(5px);
+            font-size: 1.25rem;
+            font-weight: 400;
+            border-top: 1px solid #222;
+        }
+        
+        .project-title span {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+        
+        .project-title .arrow {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
 
-    @media (min-aspect-ratio: 16/9) {
-      /* Viewport is >= 16:9, so fill width, compute height by ratio */
-      .video-ratio {
-        width: 100vw;
-        height: calc(100vw * 9 / 16);
-      }
-    }
+        .project-card:hover .arrow {
+            transform: translateX(5px);
+            color: var(--hover-color);
+        }
 
-    @media (max-aspect-ratio: 16/9) {
-      /* Viewport is < 16:9, so fill height, compute width by ratio */
-      .video-ratio {
-        height: 100vh;
-        width: calc(100vh * 16 / 9);
-      }
-    }
+        /* --- Footer --- */
+        footer {
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+        }
 
-    @media (max-width: 768px) {
-      /* Mobile-specific styles */
-      header {
-        padding: 10px 40px;
-      }
-    }
-  </style>
+        footer a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--hover-color);
+        }
+
+    </style>
 </head>
 <body>
 
-  <div class="video-wrap">
-    <div class="video-ratio">
-      <!-- Place your embed code here -->
-      <iframe
-        src="https://iframe.mediadelivery.net/embed/396477/ce12c1e6-df50-4d90-9776-d12769a853f6?autoplay=true&loop=true&muted=true&preload=true&responsive=false&playsinline=true"
-        loading="lazy"
-        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-        allowfullscreen="true">
-      </iframe>
-    </div>
-  </div>
+    <header class="header">
+        <h1>Janez Grošelj</h1>
+        <p class="intro">Artist & Architect. Founder of Luminarium and Tempomat.</p>
+    </header>
 
-  <!-- Fixed header with brand name and navigation -->
-  <header>
-    <nav class="menu">
-      <a href="https://janezgroselj.com/artworks">Artworks</a>
-      <a href="https://janezgroselj.com/about">About</a>
-    </nav>
-    <!-- LUMINARIUM as a link back to luminarium.cc -->
-    <div class="brand">
-      <a href="https://janezgroselj.com">J A N E Z &nbsp G R O S E L J</a>
-    </div>
-  </header>
+    <main class="projects-container">
+        <!-- Luminarium Project Block -->
+        <a href="https://luminarium.cc" target="_blank" class="project-card">
+            <div class="project-preview">
+                <!-- IMPORTANT: Create an 'images' folder and place your screenshot named 'luminarium-preview.jpg' inside it. -->
+                <img src="images/luminarium-preview.png" alt="Preview of the Luminarium website">
+            </div>
+            <div class="project-title">
+                <span>Luminarium</span>
+                Artworks in Light & Space <span class="arrow">→</span>
+            </div>
+        </a>
+
+        <!-- Tempomat Project Block -->
+        <a href="https://tempomat.watch" target="_blank" class="project-card">
+            <div class="project-preview">
+                <!-- IMPORTANT: Create an 'images' folder and place your screenshot named 'tempomat-preview.jpg' inside it. -->
+                <img src="images/tempomat-preview.png" alt="Preview of the Tempomat website">
+            </div>
+            <div class="project-title">
+                <span>Tempomat</span>
+                A Horological Experiment <span class="arrow">→</span>
+            </div>
+        </a>
+    </main>
+
+    <footer>
+        <a href="mailto:janez@luminarium.cc">Contact</a>
+        <span>&bull;</span>
+        <a href="https://luminarium.cc/about" target="_blank">About</a>
+    </footer>
 
 </body>
 </html>
