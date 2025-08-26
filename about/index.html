@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Janez Grošelj</title>
+    <title>About Janez Grošelj</title>
     <link rel="icon" type="image/png" href="favicon.png"> <!-- Assumes favicon is in the root folder -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,23 +64,16 @@
         
         .profile-image-container {
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            position: relative;
             margin-bottom: 2rem;
             border-radius: 12px;
-            overflow: hidden;
-            background-color: #222;
+            overflow: hidden; /* This ensures the rounded corners are applied to the image */
         }
 
-.profile-image-container img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 101%; /* Slightly larger than the container */
-    height: 101%; /* Slightly larger than the container */
-    object-fit: cover;
-    transform: translate(-50%, -50%); /* Re-centers the oversized image */
-}
+        .profile-image-container img {
+            width: 100%; /* Makes the image responsive to the container's width */
+            height: auto; /* Maintains the image's natural aspect ratio */
+            display: block; /* Removes any extra space that can appear below the image */
+        }
 
         .content-container h1 {
             font-size: clamp(1.8rem, 5vw, 2.8rem);
@@ -132,7 +125,7 @@
 
     <main class="content-container">
         <div class="profile-image-container">
-            <!-- IMPORTANT: Replace this placeholder with a personal photo -->
+            <!-- The image should be placed in an 'images' folder in the root directory -->
             <img src="../images/janez-groselj-portrait.jpg" alt="Portrait of Janez Grošelj">
         </div>
 
